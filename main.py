@@ -260,7 +260,6 @@ class MainApp(ctk.CTk):
     def cambiar_vista(self, view_class):
         if self.current_view: self.current_view.destroy()
         self.current_view = view_class(self.content_area, self.db)
-        # CORRECCIÓN ESPACIO EN BLANCO: anchor="n" para pegar al techo
         self.current_view.pack(fill="both", expand=True, anchor="n")
 
 if __name__ == "__main__":
